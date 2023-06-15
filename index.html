@@ -1,0 +1,375 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    
+<title>TERA BAKERY</title>
+<script type="text/javascript" src="js/jquery-3.6.4.min.js"></script>
+<script type="text/javascript" src="js/jquery.smoothscroll.js"></script>
+<script type="text/javascript" src="js/jquery.carouFredSel-6.2.1-packed.js"></script>
+<script>
+    $(function(){
+        $(".slide").carouFredSel({
+        items:{
+            height:"45%"
+            },
+            responsive:true
+        });
+        $("#nav-toggle").on("click",function(){
+        $("nav ul").slideToggle();
+        $(this).toggleClass("open");
+    });
+    });
+</script>
+    
+<style type="text/css">
+body, p, h1 , h2, h3, ul, figure{
+    padding: 0px;
+    margin: 0px;
+}
+img {
+    vertical-align: top;
+}
+body {
+    font-family: YuGothic, "Yu Gothic medium", "Hiragino Sans", Meiryo, sans-serif;
+    line-height: 1.8em;
+}
+.inner {
+    margin: 0 auto;
+    padding: 0px 20px;
+    width: 1000px;
+}
+header {
+    background-color: #acd598;
+}
+header .inner {
+    display: flex;
+    justify-content: space-between;
+}
+header h1 {
+    padding-top: 10px;
+}
+header nav {
+}
+header ul {
+    display: flex;
+    list-style-type: none;
+}
+nav a {
+    display: flex;
+    align-items: flex-end;
+    height: 100px;
+    margin-top: 0;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 0;
+}
+main h2 {
+    margin: 20px 0;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(205,141,60,0.38);
+}
+.sec1 {
+    background-color: hsla(28,72%,85%,0.19);
+}
+.sec1 dt {
+    font-size: 1.8em;
+    color: rgba(78,163,85,1.00);
+    font-style: normal;
+    line-height: 1.8em;
+    font-weight: bold;
+    font-family: Tahoma, Geneva, sans-serif;
+}
+.sec1 dd {
+    font-size: 110%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.sec2 p {
+    text-align: center;
+    padding-top: 50px;
+    font-size: 120%;
+    padding-bottom: 200px;
+    padding-left: 30px;
+}
+.sec2 .aaa  {
+    background-image: url(img/sec1bg2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.mainimage {
+    margin-bottom: 10px;
+}
+.box-area {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px 0px;
+    justify-content: space-around;
+}
+.box p {
+    text-align: left;
+    font-family: "Lucida Console", Monaco, monospace;
+    font-size: 130%;
+    font-weight: bolder;
+    border-bottom: 2px solid rgba(211,188,140,1.00);
+    display: table;
+    margin-bottom: 10px;
+}
+.box .text {
+    text-align: justify;
+    font-style: normal;
+    font-family: YuGothic, "Yu Gothic medium", "Hiragino Sans", Meiryo, sans-serif;
+    padding-bottom: 30px;
+}
+.map {
+}
+footer {
+    background-color: #acd598;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
+footer a  {
+    text-decoration: none;
+    color: rgba(205,141,60,0.74);
+    font-size: large;
+}
+footer a:hover {
+    color: #000000;
+}
+.slide p {
+    float: left;
+}
+figure img  {
+    transition: 0.5s;
+}
+figure:hover img  {
+    transform: scale(1.2);
+}
+.gotop {
+    position: fixed;
+    bottom: 0px;
+    right: 20px;
+    opacity: 0.7;
+}
+.gptop:hover {
+    opacity: 1;
+}
+
+@media screen and (max-width:1040px){
+img {
+    height: auto;
+    max-width: 100%;
+}
+.inner {
+    width: calc(100% - 20%);
+}
+nav ul {
+    height: 100%;
+}
+nav a {
+    height: 100%;
+}
+}
+
+@media screen and (max-width:600px){
+.map {
+    aspect-ratio: 16/9;
+}
+.map iframe {
+    width: 100%;
+    height: 100%;
+}
+.sec2 aaa {
+    background-image: url(img/sec1bg2.png);
+    background-size: auto auto;
+}
+nav {
+    margin-left: 0px;
+}
+nav ul {
+    display: block;
+    padding-bottom: 50px;
+}
+#nav-toggle {
+    width: 70px;
+    height: 50px;
+    margin-left: auto;
+    position: relative;
+    right: -20px;
+}
+#nav-toggle span {
+    width: 30px;
+    height: 4px;
+    display: block;
+    background-color: #333;
+    position: absolute;
+    left: 20px;
+}
+#nav-toggle span:nth-child(1) {
+    top: 12px;
+    background-color: rgba(120,105,86,1.00);
+}
+#nav-toggle span:nth-child(2) {
+    top: 23px;
+    background-color: rgba(120,105,86,1.00);
+}
+#nav-toggle span:nth-child(3) {
+    top: 34px;
+    background-color: rgba(120,105,86,1.00);
+}
+nav ul  {
+    display: none;
+}
+#nav-toggle.open span:nth-child(1) {
+    top: 23px;
+    transform: rotate(315deg);
+}
+#nav-toggle.open span:nth-child(2) {
+    width: 0%;
+    left: 50%;
+}
+#nav-toggle.open span:nth-child(3) {
+    top: 23px;
+    transform: rotate(-315deg);
+}
+}
+
+@media screen and (min-width:601px){
+nav ul {
+    display: flex!important;
+}
+}
+</style>
+</head>
+
+<body id="top">
+<header>
+  <div class="inner">
+    <h1><a href="#top"><img src="img/logo2.png" width="500" height="100" alt="tera bakery"/></a></h1>
+    <nav>
+        <div id="nav-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+            </div>
+      <ul>
+        <li><a href="#news"><img src="img/btn1-2.png" width="85" height="25" alt="news"/></a></li>
+        <li><a href="#concept"><img src="img/btn2-2.png" width="120" height="25" alt="concept"/></a></li>
+        <li><a href="#items"><img src="img/btn3-2.png" width="85" height="25" alt="items"/></a></li>
+        <li><a href="#shopinfo"><img src="img/btn4-2.png" width="120" height="25" alt="shop info"/></a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main>
+  <div class="inner">
+    <div class="slide">
+      <p><img src="img/main4.jpeg" width="1000" height="450" alt=""/></p>
+      <p><img src="img/main2.jpg" width="1000" height="450" alt=""/></p>
+      <p><img src="img/main5.jpg" width="1000" height="450" alt=""/></p>
+      <p><img src="img/main6.jpg" width="1000" height="450" alt=""/></p>
+    </div>
+      
+    <section class="sec1" id="news">
+      <h2><img src="img/title4.png" width="89" height="44" alt="news"/></h2>
+    <dl>
+      <dt>新商品ができました！</dt>
+      <dd>クロワッサンとカレーの組み合わせ！中はチーズ入り自家製ドライカレーをクロワッサン生地で包んで焼き上げた今までにあるような今までにない商品です。是非、ご賞味下さい！</dd>
+      <dt>店休日のご案内</dt>
+      <dd>今月は毎週水曜日がお休みとなってます。</dd>
+      <dt>パート・アルバイト募集中</dt>
+      <dd>TERA　BAKERYでは一緒に働く仲間を募集中です。詳しくはスタッフまで♪　</dd>
+    </dl>
+  </section>
+      
+      
+<section class="sec2" id="concept">
+  <h2><img src="img/title1.png" width="152" height="44" alt="concept"/></h2>
+      <div class="aaa">
+        <p>TERA BAKERYでは、全てのパンに「ルヴァン」を使用しています。<br>
+          ルヴァンとは、小麦粉・ライ麦・ハチミツからできた天然酵母のことで、<br>
+            風味豊かでとても美味しいパンになる酵母です。<br>
+          さらに、乳酸菌が多く含まれているので、腸内をキレイにしてくれます。<br>
+          ほかにも、厳選されたマイナスイオン水、国産小麦粉、ビタミンEたっぷりの低コレステロール卵など、<br>
+          全ての素材にこだわり、ありったけの心を込めて、今日もパンを焼いています。</p>
+      </div>
+    </section>
+    <section class="sec3" id="items">
+      <h2><img src="img/title2.png" width="97" height="45" alt="items"/></h2>
+      <div class="box-area">
+        <div class="box">
+          <figure><img src="img/image3-2.png" width="260" height="260" alt=""/></figure>
+          <p>メロンパン</p>
+          <div class="text">
+            人気No１メニュー！<br>
+            時間が立ってもザクザクした<br>
+            クッキー生地が秘訣です<br>
+          </div>
+        </div>
+        <div class="box">
+          <figure><img src="img/image8-2.png" width="260" height="260" alt=""/></figure>
+          <p>食パン</p>
+          <div class="text">
+            毎日食べても飽きない<br>
+            TERA　BAKERY定番商品
+          ♪</div>
+        </div>
+        <div class="box">
+          <figure><img src="img/image7-2.png" width="260" height="260" alt=""/></figure>
+          <p>カレーパン</p>
+          <div class="text">
+          ひとくち食べたら忘れられない<br>
+            子供から大人まで幸せになるこの味</div>
+        </div>
+        <div class="box">
+          <figure><img src="img/image4-2.png" width="260" height="260" alt=""/></figure>
+          <p>フランスパン</p>
+          <div class="text">
+            中はもちもち外はカリっと、<br>
+            歯ごたえのある食感が楽しめます</div>
+        </div>
+        <div class="box">
+          <figure><img src="img/image2-2.png" width="260" height="260" alt=""/></figure>
+          <p>クロワッサン</p>
+          <div class="text">
+            1つじゃ物足りない!!<br>
+            何個でもたべたくなる<br>
+            サクサク食感が魅力的<br>
+          </div>
+        </div>
+        <div class="box">
+          <figure><img src="img/image6-2.png" width="260" height="260" alt=""/></figure>
+          <p>チョコパン</p>
+          <div class="text">
+              店長一押し！<br>
+            ふわふわ生地とチョコの<br>
+            アクセントが抜群です   
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="sec4" id="shopinfo">
+      <h2><img src="img/title3.png" width="166" height="45" alt="shop info"/></h2>
+      <div class="box-area">
+        <p>住所：東京都中野区東中野0-1-2<br>
+          電話番号：0120-××××-××××<br>
+        ＦＡＸ：03-××××-××××<br>
+            営業時間：朝8時～19時まで<br></p>
+        <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1620.8739771837243!2d139.745433!3d35.658581000000005!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188bbd9009ec09%3A0x481a93f0d2a409dd!2z5p2x5Lqs44K_44Ov44O8!5e0!3m2!1sja!2sjp!4v1684899265667!5m2!1sja!2sjp" width="500" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+      </div>
+        
+    </section>
+  </div>
+<p class="gotop"><a href="#top"><img src="img/gobtn.png" width="73" height="69" alt=""/></a></p>
+</main>
+<footer>
+  <div class="inner"> <a href="#top"><img src="img/logo2.png" width="400" height="100" alt=""/></a>
+<p>｜ <a href="#news">news</a> ｜ <a href="#concept">concept</a> ｜ <a href="#items">items</a> ｜<a href="#shop info"> shop info</a> ｜</p>
+<p>&copy;TERA BAKERY All rights reserved.</p>
+  </div>
+</footer>
+</body>
+</html>
